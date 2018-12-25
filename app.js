@@ -3,7 +3,7 @@ var express = require("express");
 
 var app = express();
 app.set('port', process.env.PORT || 7878);
-
+var cmd=require('node-cmd');
 
 var bodyParser = require('body-parser')
 app.use(bodyParser.json()); // to support JSON-encoded bodies

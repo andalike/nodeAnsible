@@ -11,7 +11,8 @@ app.use(bodyParser.urlencoded({ // to support URL-encoded bodies
     extended: true
 }));
 
-app.get('/createInstance', function (req, res) {
+//This will be used to run the Script , required to deploy the website
+app.post('/createInstance', function (req, res) {. 
     var commandToRun = "ansible-playbook -v ";
     var fileName = "ec2_prov_playbook.yml";
     var finalCommand = commandToRun + fileName;
@@ -20,8 +21,8 @@ app.get('/createInstance', function (req, res) {
     res.sendStatus(200);
 });
 
-app.post('/createInstance', function (req, res) {
-    //Write some post logic here
+//This is a dummy placeholder, This is to test if the script is working/or not.
+app.get('/createInstance', function (req, res) {
     res.sendStatus(200);
 });
 

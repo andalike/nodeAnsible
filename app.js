@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ // to support URL-encoded bodies
 }));
 
 //This will be used to run the Script , required to deploy the website
-app.post('/createInstance', function (req, res) {. 
+app.post('/createInstance', function (req, res) {
     var commandToRun = "ansible-playbook -v ";
     var fileName = "ec2_prov_playbook.yml";
     var finalCommand = commandToRun + fileName;
